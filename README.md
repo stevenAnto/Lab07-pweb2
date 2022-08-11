@@ -61,28 +61,46 @@
 
 **DJANGO REST FRAMEWORK** 
 
-API que contiene en formato JSON los enlaces a sus respectivas bases:
+API GET en formato JSON del API
 
 ![api](imagenes/api.jpg)
 
-Este archivo contiene los datos que estan en Alumnos, este archivo permite llenar los campos del modelo estudiante que contiene
+API GET de los estududiantes, mostrandonos su: Código, Código del tutor, Nombre, Apellido, Dirección, Teléfono, Tipo de Documento, Nro de DOcumento y Fecha de Nacimineto.
 
 ![api_alumnos](imagenes/api_alumnos.jpg)
 
+API GET que nos muestra los detalles tanto de Cantidad de Cursos, Cantidad de Alumnos, Cantidad de Padres, Cantidad de Profesores, Monto Total de Cursos y el monto total de honorarios al docente.
+
 ![api_detail](imagenes/api_detail.jpg)
+
+Contamos con un único usuario administrador, por medio del GET revizamos los datos que se tienen registrados.
 
 ![administradores](imagenes/administradores.jpg)
 
+API GET donde se obtienen los Código de Curso, Codigo de Profesor, Nombre, Precio, Fecha de Inicio y Fecha Fin.
+
 ![cursos](imagenes/cursos.jpg)
+
+API GET profesor donde se nos proporcionan los siguientes datos: Codigo Profesor, Nombres, Apellidos, Tipo de DOcumento y Num de Documento.
 
 ![docente](imagenes/docente.jpg)
 
+API GET de los registros Donde Principalmente tenemos el Num del Registro, Codigo del Alumno y Código del DOcente que impartira dicho curso.
+
 ![matriculas](imagenes/matriculas.jpg)
+
+Prueba del API PUT del Tutor con Código 1
 
 ![tutor](imagenes/tutor.jpg)
 
+API GET de Honorarios
+
 ![honorarios](imagenes/honorarios.jpg)
 
+API POST del Admin, siendo validado
+
 ![login1](imagenes/login1.jpg)
+
+API POST de daots incorrectos, siendo rechazado.
 
 ![login2](imagenes/login2.jpg)
