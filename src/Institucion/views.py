@@ -36,3 +36,30 @@ class HonorariosViewSet(viewsets.ModelViewSet):
 class TutorViewSet(viewsets.ModelViewSet):
     queryset = Tutor.objects.all()
     serializer_class = TutorSerializer
+
+# #ALUMNOS
+# @csrf_exempt
+# def alumnoApi(request, codigoAlumno=0):
+#     if request.method == 'GET':
+#         alumnos = Alumno.objects.all()
+#         alumnos_serializer = AlumnoSerializer(alumnos, many=True)
+#         return JsonResponse(alumnos_serializer.data, safe=False)
+#     elif request.method == 'POST':
+#         alumno_data = JSONParser().parse(request)
+#         alumno_serializer = AlumnoSerializer(data = alumno_data)
+#         if alumno_serializer.is_valid():
+#             alumno_serializer.save()
+#             return JsonResponse("Alumno registrado exitosamente!!", safe=False)
+#         return JsonResponse("Error al registrar alumno", safe=False)
+#     elif request.method == 'PUT':
+#         alumno_data = JSONParser().parse(request)
+#         alumno_before = Alumno.objects.get(codigoAlumno = alumno_data['codigoAlumno'])
+#         alumno_serializer = AlumnoSerializer(alumno_before, data = alumno_data)
+#         if alumno_serializer.is_valid():
+#             alumno_serializer.save()
+#             return JsonResponse("Datos del alumno actualizado exitosamente!!", safe=False)
+#         return JsonResponse("Error al actualizar los datos del alumno", safe=False)
+#     elif request.method == 'DELETE':
+#         alumno = Alumno.objects.get(codigoAlumno=codigoAlumno)
+#         alumno.delete()
+#         return JsonResponse("Alumno eliminado exitosamente!!", safe=False)
