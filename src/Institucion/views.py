@@ -117,3 +117,31 @@ class TutorViewSet(viewsets.ModelViewSet):
 #         profesor = Profesor.objects.get(codigoProfesor=codigoProfesor)
 #         profesor.delete()
 #         return JsonResponse("Profesor eliminado exitosamente!!", safe=False)
+
+# #CURSOS
+# @csrf_exempt
+# def cursosApi(request, codigoCurso=0):
+#     if request.method == 'GET':
+#         cursos = Cursos.objects.all()
+#         curso_serializer = CursosSerializer(cursos, many=True)
+#         return JsonResponse(curso_serializer.data, safe=False)
+#     elif request.method == 'POST':
+#         curso_data = JSONParser().parse(request)
+#         curso_serializer = CursosSerializer(data = curso_data, many=True)
+#         print(curso_serializer);
+#         if curso_serializer.is_valid():
+#             curso_serializer.save()
+#             return JsonResponse("Curso agregado exitosamente!!", safe=False)
+#         return JsonResponse("Error al registrar el curso")
+#     elif request.method == 'PUT':
+#         curso_data = JSONParser().parse(request)
+#         curso_before = Cursos.objects.get(codigoCurso = curso_data['codigoCurso'])
+#         curso_serializer = CursosSerializer(curso_before, data = curso_data)
+#         if curso_serializer.is_valid():
+#             curso_serializer.save()
+#             return JsonResponse("Datos del curso actualizado exitosamente!!", safe=False)
+#         return JsonResponse("Error al actualizar los datos del profesor", safe=False)
+#     elif request.method == 'DELETE':
+#         curso = Cursos.objects.get(codigoCurso=codigoCurso)
+#         curso.delete()
+#         return JsonResponse("Curso eliminado exitosamente!!", safe=False)
