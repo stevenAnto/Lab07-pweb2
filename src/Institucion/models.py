@@ -50,7 +50,7 @@ class Alumno(models.Model):
     tipoDocumento = models.CharField(max_length=50)
     numDocumento = models.CharField(max_length=15)
     def nombre_completo(self):
-    return "{}, {}".format(self.apellidos, self.nombres)
-def __str__(self):
-    return self.nombre_completo()
+        return "{}, {}".format(self.apellidos, self.nombres)
+    def __str__(self):
+        return self.nombre_completo()
 
