@@ -64,3 +64,10 @@ class Alumno(models.Model):
 
     def __str__(self):
         return self.nombre
+
+    class Matriculas(models.Model):
+    codigoRegistro = models.AutoField(primary_key=True)
+    descripcion = models.CharField(max_length=500)
+    codigoAlumno = models.ForeignKey(Alumno, related_name='fk_alumno', on_delete=models.CASCADE)
+    codigoCurso = models.ForeignKey(Cursos, related_name='fk_cursos', on_delete=models.CASCADE)
+    monto = models.DecimalField(max_digits = 7, decimal_places = 2)
