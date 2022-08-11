@@ -145,3 +145,43 @@ class TutorViewSet(viewsets.ModelViewSet):
 #         curso = Cursos.objects.get(codigoCurso=codigoCurso)
 #         curso.delete()
 #         return JsonResponse("Curso eliminado exitosamente!!", safe=False)
+
+@csrf_exempt
+def detailApi(request):
+    if request.method == 'GET':
+        
+        list_precios_cursos = Cursos.objects.values_list('precio', flat=True)
+        list_honorarios_profesores = Honorarios.objects.values_list('monto', flat=True)
+        resp_data = {'cantidadCursos': len(Cursos.objects.all()), 
+                     'cantidadAlumnos': len(Alumno.objects.all()),
+                     'cantidadPadres': len(Tutor.objects.all()),
+                     'cantidadProfesores': len(Profesor.objects.all()),
+                     'montoTotalCursos': sum(list_precios_cursos),
+                     'montoTotalHonorariosProfesores': sum(list_honorarios_profesores)
+                     }
+        return JsonResponse(resp_data)
+
+@csrf_exempt
+def loginAdminApi(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        try:
+            result = Admin.objects.get(usuario=data['usuario'], password=data['password'])
+            res = AdminSerializer(result, many=False)
+            nombre = res.data['nombres']
+            return JsonResponse("Bienvenido "+nombre, safe=False)
+        except Admin.DoesNotExist:
+            return JsonResponse("Usuario invalido", safe=False)
+        #resp_data = {'cantidadCursos': 1 }
+
+@csrf_exempt
+def misCursosApi(request):
+    if request.method == 'GET':
+        try:
+            cursos = Matriculas.objects.filter(codigoAlumno = request.GET['codigoAlumno']).values('nombre')
+            curso_serializer = CursosSerializer(cursos, many=True)
+            print(curso_serializer)
+            return JsonResponse(curso_serializer.data, safe=False)
+        except Cursos.DoesNotExist:
+            return JsonResponse("El usuario no cuenta con cursos registrados", safe=False)
+        #resp_data = {'cantidadCursos': 1 }
