@@ -74,3 +74,7 @@
 ![docente](imagenes/docente.jpg)
 
 ![matriculas](imagenes/matriculas.jpg)
+
+![tutor](imagenes/tutor.jpg)
+
+![honorarios](imagenes/honorarios.jpg)
