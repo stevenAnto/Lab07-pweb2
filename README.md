@@ -78,3 +78,7 @@
 ![tutor](imagenes/tutor.jpg)
 
 ![honorarios](imagenes/honorarios.jpg)
+
+![login1](imagenes/login1.jpg)
+
+![login2](imagenes/login2.jpg)
