@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     'corsheaders',
-    'Institucion.apps.InstitucionConfig'
+    'Institucion.apps.InstitucionConfig',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'colegiosApp2.urls'
+ROOT_URLCONF = 'colegioPagos.urls'
 
 TEMPLATES = [
     {
@@ -75,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'colegiosApp2.wsgi.application'
+WSGI_APPLICATION = 'colegioPagos.wsgi.application'
 
 
 # Database
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'colegiosApp2.wsgi.application'
 
 DATABASES = {
       'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'institucion',
         'USER': 'postgres',
         'PASSWORD': '123456',
