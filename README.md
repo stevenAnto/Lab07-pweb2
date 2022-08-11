@@ -61,9 +61,11 @@
 
 **DJANGO REST FRAMEWORK** 
 
-API
+API que contiene en formato JSON los enlaces a sus respectivas bases:
 
 ![api](imagenes/api.jpg)
+
+Este archivo contiene los datos que estan en Alumnos, este archivo permite llenar los campos del modelo estudiante que contiene
 
 ![api_alumnos](imagenes/api_alumnos.jpg)
 
