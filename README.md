@@ -63,3 +63,14 @@
 
 ![api](imagenes/api.jpg)
 
+![api_alumnos](imagenes/api_alumnos.jpg)
+
+![api_detail](imagenes/api_detail.jpg)
+
+![administradores](imagenes/administradores.jpg)
+
+![cursos](imagenes/cursos.jpg)
+
+![docente](imagenes/docente.jpg)
+
+![matriculas](imagenes/matriculas.jpg)
