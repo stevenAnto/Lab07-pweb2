@@ -30,12 +30,12 @@
 </theader>
 <tbody>
 <tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 2</td></tr>
-<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Plantilla-Django</td></tr>
+<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Django - Rest</td></tr>
 <tr>
 <td>NÚMERO DE PRÁCTICA:</td><td>06</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
 </tr>
 <tr>
-<td>FECHA DE PRESENTACIÓN: </td><td>03-Jul-2022</td><td>HORA DE PRESENTACIÓN: </td><td colspan="3"></td>
+<td>FECHA DE PRESENTACIÓN: </td><td>11-Ago-2022</td><td>HORA DE PRESENTACIÓN: </td><td colspan="3"></td>
 </tr>
 <tr><td colspan="4">INTEGRANTE(S): 
 <ul>
@@ -58,36 +58,8 @@
 </table>
 </div>
 
-# ProyectoFinalPweb2
 
-Primera Tarea
+**DJANGO REST FRAMEWORK** 
 
-1  Seleccionarla plantilla del usuario con CSS, con Javascript, HTML (seria bueno que tenga formularios)
-2  Poder la plantilla en Django
-3  Manejar los archivos statics
-
-**Desarrollo** 
-
--  La seleccion de la plantilla la realizamos de :
-
--  https://startbootstrap.com/template/small-business
- 
-Una vez obtenido los archivos de la plantilla procedimos a crear el proyecto en Django, tenido el siguiente directorio
-
- ![ejercicio01](directorioProyecto.jpg)
-
-
-Luego procedimos a crar una app llamada inicio, teniendo los siguientes archivos
-
- ![ejercicio01](directorioApp.jpg)
-
--  Procedimos a ubicar dentro de la aplicacion el archivo inicio.html
--  Luego ubicamos el archivo statico del directorio css como inicio.css
--  Pusimos la sintaxis adecuada para que el template reconozca al archivo estatico inicio.css
-
--  Corremos el servidor y podemos ver las  pagina de Inicio
-
- ![ejercicio01](paginaInicio1.jpg)
- ![ejercicio01](paginaInicio2.jpg)
 
 
