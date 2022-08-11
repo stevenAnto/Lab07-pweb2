@@ -71,3 +71,14 @@ class Alumno(models.Model):
     codigoAlumno = models.ForeignKey(Alumno, related_name='fk_alumno', on_delete=models.CASCADE)
     codigoCurso = models.ForeignKey(Cursos, related_name='fk_cursos', on_delete=models.CASCADE)
     monto = models.DecimalField(max_digits = 7, decimal_places = 2)
+
+    class Honorarios(models.Model):
+    codigoHonorario = models.AutoField(primary_key=True)
+    descripcion = models.CharField(max_length=500)
+    codigoProfesor = models.ForeignKey(Profesor, related_name='fk_profesor_h', on_delete=models.CASCADE)
+    monto = models.DecimalField(max_digits = 7, decimal_places = 2)
+    
+    def detalle(self):
+        return "{} - {}".format(self.codigoProfesor, self.monto)
+    def __str__(self):
+        return self.detalle()
