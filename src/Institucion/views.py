@@ -63,3 +63,30 @@ class TutorViewSet(viewsets.ModelViewSet):
 #         alumno = Alumno.objects.get(codigoAlumno=codigoAlumno)
 #         alumno.delete()
 #         return JsonResponse("Alumno eliminado exitosamente!!", safe=False)
+
+# #USUARIOS ADMIN
+# @csrf_exempt
+# def adminApi(request, id=0):
+#     if request.method == 'GET':
+#         admins = Admin.objects.all()
+#         admin_serializer = AdminsGetSerializer(admins, many=True)
+#         return JsonResponse(admin_serializer.data, safe=False)
+#     elif request.method == 'POST':
+#         admin_data = JSONParser().parse(request)
+#         admin_serializer = AdminSerializer(data = admin_data)
+#         if admin_serializer.is_valid():
+#             admin_serializer.save()
+#             return JsonResponse("Usuario registrado exitosamente!!", safe=False)
+#         return JsonResponse("Error al registrar el usuario", safe=False)
+#     elif request.method == 'PUT':
+#         admin_data = JSONParser().parse(request)
+#         admin_before = Admin.objects.get(id = admin_data['id'])
+#         admin_serializer = AdminSerializer(admin_before, data = admin_data)
+#         if admin_serializer.is_valid():
+#             admin_serializer.save()
+#             return JsonResponse("Datos del usuario actualizado exitosamente!!", safe=False)
+#         return JsonResponse("Error al actualizar los datos del usuario", safe=False)
+#     elif request.method == 'DELETE':
+#         admin = Admin.objects.get(id=id)
+#         admin.delete()
+#         return JsonResponse("Usuario eliminado exitosamente!!", safe=False)
